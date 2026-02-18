@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploads (keep folder structure)
+server/uploads/videos/*
+server/uploads/reels/*
+server/uploads/subtitles/*
+!server/uploads/videos/.gitkeep
+!server/uploads/reels/.gitkeep
+!server/uploads/subtitles/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*

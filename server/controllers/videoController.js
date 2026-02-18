@@ -16,7 +16,7 @@ exports.uploadVideo = async (req, res) => {
       category,
       duration: parseInt(duration),
       videoUrl: `/uploads/videos/${req.file.filename}`,
-      uploadedBy: req.user.id
+      uploadedBy: req.user._id
     });
 
     res.status(201).json({
@@ -76,7 +76,7 @@ exports.getVideo = async (req, res) => {
 exports.updateWatchHistory = async (req, res) => {
   try {
     const { videoId, progress } = req.body;
-    const userId = req.user.id;
+    const userId = req.user._id;
 
     const video = await Video.findById(videoId);
     if (!video) {
@@ -121,7 +121,7 @@ exports.likeVideo = async (req, res) => {
     await video.save();
 
     // Update user preferences
-    const user = await User.findById(req.user.id);
+    const user = await User.findById(req.user._id);
     const currentScore = user.preferences.get(video.category) || 0;
     user.preferences.set(video.category, currentScore + 5);
     await user.save();

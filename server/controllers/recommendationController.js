@@ -3,7 +3,7 @@ const User = require('../models/User');
 
 exports.getRecommendations = async (req, res) => {
   try {
-    const user = await User.findById(req.user.id);
+    const user = await User.findById(req.user._id);
     
     // Get user preferences
     const preferences = user.preferences;

@@ -89,7 +89,7 @@ const Login = () => {
 
           <div className="bg-gray-900 rounded-lg p-6 border border-purple-600">
             <h4 className="text-lg font-semibold mb-2">Basic</h4>
-            <p className="text-3xl font-bold mb-4">$6.99</p>
+            <p className="text-3xl font-bold mb-4">$9.99<span className="text-sm text-gray-400">/mo</span></p>
             <ul className="text-sm text-gray-300 space-y-2">
               <li>Full library access</li>
               <li>No ads</li>
@@ -99,7 +99,7 @@ const Login = () => {
 
           <div className="bg-gray-900 rounded-lg p-6 border border-purple-600">
             <h4 className="text-lg font-semibold mb-2">Premium</h4>
-            <p className="text-3xl font-bold mb-4">$12.99</p>
+            <p className="text-3xl font-bold mb-4">$19.99<span className="text-sm text-gray-400">/mo</span></p>
             <ul className="text-sm text-gray-300 space-y-2">
               <li>Everything in Basic</li>
               <li>No ads</li>

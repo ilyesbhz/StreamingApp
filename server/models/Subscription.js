@@ -11,7 +11,11 @@ const subscriptionSchema = new mongoose.Schema({
     enum: ['basic', 'premium'],
     required: true
   },
-  stripeSessionId: String,
+  stripeSessionId: {
+    type: String,
+    unique: true,
+    sparse: true
+  },
   status: {
     type: String,
     enum: ['active', 'expired', 'cancelled'],

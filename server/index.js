@@ -11,6 +11,8 @@ const reelRoutes = require('./routes/reels');
 const recommendationRoutes = require('./routes/recommendations');
 const subscriptionRoutes = require('./routes/subscriptions');
 const movieReelsRoutes = require('./routes/movieReels');
+const discussionRoutes = require('./routes/discussions');
+const notificationRoutes = require('./routes/notifications');
 
 const app = express();
 
@@ -32,6 +34,8 @@ app.use('/api/reels', reelRoutes);
 app.use('/api/recommendations', recommendationRoutes);
 app.use('/api/subscriptions', subscriptionRoutes);
 app.use('/api/movie-reels', movieReelsRoutes);
+app.use('/api/discussions', discussionRoutes);
+app.use('/api/notifications', notificationRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

@@ -12,7 +12,7 @@ exports.uploadReel = async (req, res) => {
     const reel = await Reel.create({
       title,
       videoUrl: `/uploads/reels/${req.file.filename}`,
-      uploadedBy: req.user.id
+      uploadedBy: req.user._id
     });
 
     res.status(201).json({

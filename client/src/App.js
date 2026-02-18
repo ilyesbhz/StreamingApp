@@ -8,6 +8,10 @@ import VideoPlayer from './pages/VideoPlayer/VideoPlayer';
 import Reels from './pages/Reels/Reels';
 import Profile from './pages/Profile/Profile';
 import AdminDashboard from './pages/Admin/AdminDashboard';
+import Discussions from './pages/Discussions/Discussions';
+import Pricing from './pages/Pricing/Pricing';
+import PaymentSuccess from './pages/Payment/PaymentSuccess';
+import PaymentCancel from './pages/Payment/PaymentCancel';
 import Navbar from './components/Layout/Navbar';
 import PrivateRoute from './components/Layout/PrivateRoute';
 
@@ -39,6 +43,12 @@ function App() {
               </PrivateRoute>
             } />
             
+            <Route path="/discussions" element={
+              <PrivateRoute>
+                <Discussions />
+              </PrivateRoute>
+            } />
+            
             <Route path="/profile" element={
               <PrivateRoute>
                 <Profile />
@@ -48,6 +58,24 @@ function App() {
             <Route path="/admin" element={
               <PrivateRoute adminOnly>
                 <AdminDashboard />
+              </PrivateRoute>
+            } />
+            
+            <Route path="/pricing" element={
+              <PrivateRoute>
+                <Pricing />
+              </PrivateRoute>
+            } />
+            
+            <Route path="/payment-success" element={
+              <PrivateRoute>
+                <PaymentSuccess />
+              </PrivateRoute>
+            } />
+            
+            <Route path="/payment-cancel" element={
+              <PrivateRoute>
+                <PaymentCancel />
               </PrivateRoute>
             } />
           </Routes>

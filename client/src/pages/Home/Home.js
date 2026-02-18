@@ -166,8 +166,7 @@ const Home = () => {
       <div className="max-w-6xl mx-auto px-6 py-10">
         <section className="mb-12">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-semibold">Most popular</h2>
-            <span className="text-sm text-gray-400">Hover for trailer</span>
+            <h2 className="text-2xl font-semibold">Trending Movies</h2>
           </div>
 
           {featuredLoading ? (
@@ -281,8 +280,6 @@ const Home = () => {
 
         <section className="mb-10">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Trending movies</h2>
-            <span className="text-sm text-gray-400">Powered by TMDB</span>
           </div>
 
           {moviesLoading ? (
